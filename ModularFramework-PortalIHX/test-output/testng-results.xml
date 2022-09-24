@@ -1,34 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-23T18:16:07 IST" name="Default suite" finished-at="2022-09-23T18:16:22 IST" duration-ms="15360">
+  <suite started-at="2022-09-24T15:25:25 IST" name="Default suite" finished-at="2022-09-24T15:25:40 IST" duration-ms="14875">
     <groups>
     </groups>
-    <test started-at="2022-09-23T18:16:07 IST" name="Default test" finished-at="2022-09-23T18:16:22 IST" duration-ms="15360">
+    <test started-at="2022-09-24T15:25:25 IST" name="Default test" finished-at="2022-09-24T15:25:40 IST" duration-ms="14875">
       <class name="in.ihx.provider.tests.IHXLogin">
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:in.ihx.provider.tests.IHXLogin@33bc72d1]" started-at="2022-09-23T18:16:07 IST" name="preSetup" finished-at="2022-09-23T18:16:07 IST" duration-ms="197" status="PASS">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:25 IST" name="preSetup" finished-at="2022-09-24T15:25:25 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:in.ihx.provider.tests.IHXLogin@33bc72d1]" started-at="2022-09-23T18:16:07 IST" name="invokeBrowser" finished-at="2022-09-23T18:16:11 IST" duration-ms="4259" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:25 IST" name="setup" finished-at="2022-09-24T15:25:29 IST" duration-ms="3522" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invokeBrowser -->
-        <test-method signature="verifyUserLoginWithCorrectCredential()[pri:0, instance:in.ihx.provider.tests.IHXLogin@33bc72d1]" started-at="2022-09-23T18:16:11 IST" name="verifyUserLoginWithCorrectCredential" finished-at="2022-09-23T18:16:21 IST" duration-ms="10026" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginWithCorrectCredential(java.lang.String,java.lang.String)[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:30 IST" name="verifyUserLoginWithCorrectCredential" data-provider="getUserData" finished-at="2022-09-24T15:25:39 IST" duration-ms="9510" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manipal@medibuddy.in]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ihx@321]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithCorrectCredential -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:39 IST" name="afterMethod" finished-at="2022-09-24T15:25:39 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithCorrectCredential status=SUCCESS method=IHXLogin.verifyUserLoginWithCorrectCredential(java.lang.String,java.lang.String)[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyUserLoginWithCorrectCredential(java.lang.String,java.lang.String)[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:39 IST" name="verifyUserLoginWithCorrectCredential" data-provider="getUserData" finished-at="2022-09-24T15:25:39 IST" duration-ms="19" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Manipal Hospital]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [Manipal Hospital] but found [Manipal Hospitalsssss]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#login\-form_username"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-PD546U5U', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [767091a046c5712b02263d6f84c18ca1, findElement {using=id, value=login-form_username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Jitendra\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51106}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51106/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 767091a046c5712b02263d6f84c18ca1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Manipal Hospital] but found [Manipal Hospitalsssss]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at in.ihx.provider.tests.IHXLogin.verifyUserLoginWithCorrectCredential(IHXLogin.java:24)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#login\-form_username"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-PD546U5U', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [767091a046c5712b02263d6f84c18ca1, findElement {using=id, value=login-form_username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Jitendra\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51106}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51106/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 767091a046c5712b02263d6f84c18ca1
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy19.sendKeys(Unknown Source)
+at commonLibs.implementations.CommonElement.setText(CommonElement.java:45)
+at in.ihx.provider.pages.LoginPage.userLogin(LoginPage.java:46)
+at in.ihx.provider.tests.IHXLogin.verifyUserLoginWithCorrectCredential(IHXLogin.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,26 +129,26 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithCorrectCredential -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:in.ihx.provider.tests.IHXLogin@33bc72d1]" started-at="2022-09-23T18:16:21 IST" name="afterMethod" finished-at="2022-09-23T18:16:21 IST" duration-ms="192" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:39 IST" name="afterMethod" finished-at="2022-09-24T15:25:39 IST" duration-ms="197" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithCorrectCredential status=FAILURE method=IHXLogin.verifyUserLoginWithCorrectCredential()[pri:0, instance:in.ihx.provider.tests.IHXLogin@33bc72d1] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserLoginWithCorrectCredential status=FAILURE method=IHXLogin.verifyUserLoginWithCorrectCredential(java.lang.String,java.lang.String)[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:in.ihx.provider.tests.IHXLogin@33bc72d1]" started-at="2022-09-23T18:16:21 IST" name="closeBrowser" finished-at="2022-09-23T18:16:22 IST" duration-ms="821" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:39 IST" name="closeBrowser" finished-at="2022-09-24T15:25:40 IST" duration-ms="817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:in.ihx.provider.tests.IHXLogin@33bc72d1]" started-at="2022-09-23T18:16:22 IST" name="postCleanUp" finished-at="2022-09-23T18:16:23 IST" duration-ms="442" status="PASS">
+        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:in.ihx.provider.tests.IHXLogin@268f106e]" started-at="2022-09-24T15:25:40 IST" name="postCleanUp" finished-at="2022-09-24T15:25:40 IST" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCleanUp -->

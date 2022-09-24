@@ -5,12 +5,12 @@
     <classes>
       <class name="in.ihx.provider.tests.IHXLogin">
         <methods>
-          <include name="invokeBrowser"/>
           <include name="preSetup"/>
-          <include name="verifyUserLoginWithCorrectCredential"/>
+          <include name="verifyUserLoginWithCorrectCredential" invocation-numbers="1"/>
+          <include name="setup"/>
           <include name="afterMethod"/>
-          <include name="postCleanUp"/>
           <include name="closeBrowser"/>
+          <include name="postCleanUp"/>
         </methods>
       </class> <!-- in.ihx.provider.tests.IHXLogin -->
     </classes>
